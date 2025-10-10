@@ -31,9 +31,8 @@ function Header() {
       <div className="container">
         <div className="header-content">
           <div className="logo">
-            <h2>Your Name</h2>
+            <h2>Chetsada jinamoon</h2>
           </div>
-
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
             <ul className="nav-list">
               <li><button onClick={() => scrollToSection('about')}>About</button></li>

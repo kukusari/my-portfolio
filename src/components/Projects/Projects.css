@@ -1,0 +1,209 @@
+/* ================================
+   🌟 PROJECTS SECTION
+================================ */
+.projects.section {
+  padding: 80px 0;
+  background: var(--bg-primary, #f9fafb);
+  color: var(--text-primary, #111827);
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-secondary, #6b7280);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* ================================
+   🧩 FILTER BUTTONS
+================================ */
+.project-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: 1px solid var(--border, #d1d5db);
+  background-color: var(--bg-secondary, #ffffff);
+  color: var(--text-secondary, #374151);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.filter-btn:hover {
+  background-color: var(--accent-hover, #e5e7eb);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background-color: var(--accent, #3b82f6);
+  color: #fff;
+  border-color: var(--accent, #3b82f6);
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+/* ================================
+   🧱 PROJECTS GRID
+================================ */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.8rem;
+  margin-top: 1rem;
+}
+
+/* ================================
+   🪄 PROJECT CARD (inheritable)
+================================ */
+.project-card {
+  background: var(--bg-secondary, #ffffff);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.project-image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* Content */
+.project-content {
+  padding: 1.3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.project-description {
+  color: var(--text-secondary, #6b7280);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  line-height: 1.5;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.tech-stack li {
+  background-color: var(--bg-chip, #f3f4f6);
+  color: var(--text-secondary, #374151);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+}
+
+/* Actions */
+.project-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.project-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: all 0.25s ease;
+}
+
+.project-actions .btn-live {
+  background-color: var(--accent, #3b82f6);
+  color: white;
+}
+
+.project-actions .btn-live:hover {
+  background-color: #2563eb;
+}
+
+.project-actions .btn-github {
+  background-color: var(--bg-chip, #f3f4f6);
+  color: var(--text-primary, #111827);
+}
+
+.project-actions .btn-github:hover {
+  background-color: #e5e7eb;
+}
+
+/* ================================
+   📭 NO PROJECTS MESSAGE
+================================ */
+.no-projects {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1rem;
+  color: var(--text-secondary, #6b7280);
+  border: 1px dashed var(--border, #d1d5db);
+  border-radius: 12px;
+  margin-top: 2rem;
+  background-color: var(--bg-secondary, #ffffff);
+}
+
+/* ================================
+   📱 RESPONSIVE DESIGN
+================================ */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
